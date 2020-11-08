@@ -5,6 +5,7 @@ sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-twe
 ### Wifi
 https://github.com/aircrack-ng/rtl8812au/tree/07c704c0a7131208a909c3fc36e7daa122b98b16
 
+
 ## rpm fusion:
 - [rpm fusion](https://rpmfusion.org/Configuration)
 - [multimedia](https://rpmfusion.org/Howto/Multimedia)
@@ -51,6 +52,19 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 ```
 
  ```spaceship"```
+
+## Clamav
+
+### Install
+```
+sudo dnf install clamav clamav-update
+```
+### Run
+
+` freshclam ` - update database
+
+sudo clamscan -r / | grep FOUND >> /home/pnogas/report
+
 
 
 ### hostname:
