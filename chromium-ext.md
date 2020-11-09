@@ -1,5 +1,3 @@
-ff:
-
 [bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb)
 
 [dark reader](https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh) or brave://flags/#enable-force-dark selective inversion non-image elements
