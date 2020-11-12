@@ -32,10 +32,10 @@ fastestmirror=true
 deltarpm=true
 ```
 
-### [github ssh](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+### git
 ```
 git config --global user.name **name**
-git config --global user.email 'nogasgit@outlook.com'
+git config --global user.email 'nogaspat+git@gmail.com'
 git config --global core.editor nano
 ssh-keygen -t rsa -b 4096
 xclip -sel clip < ~/.ssh/id_rsa.pub
