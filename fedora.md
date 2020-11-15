@@ -1,6 +1,6 @@
 ## apps:
 ```
-sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers pavucontrol gimp nano zsh wine wine-core flatpak google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts google-noto-emoji-color-fonts libreoffice libreoffice-langpack-pl python3-virtualenv     python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions && git clone https://github.com/aircrack-ng/rtl8812au.git && systemctl reboot
+sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers pavucontrol gimp nano zsh flatpak google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts google-noto-emoji-color-fonts libreoffice libreoffice-langpack-pl python3-virtualenv     python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions && git clone https://github.com/aircrack-ng/rtl8812au.git && systemctl reboot
 ```
 ### Wifi
 https://github.com/aircrack-ng/rtl8812au/tree/07c704c0a7131208a909c3fc36e7daa122b98b16
