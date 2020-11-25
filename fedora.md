@@ -106,8 +106,13 @@ System Settings > Input Devices > Keyboard > Hardware > NumLock on KDE Startup
 Grub
 ```
 sudo nano /etc/default/grub
+
+```
+EFI:
+```
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
+
 Remove sudo:
 ``` 
 sudo nano /etc/group
