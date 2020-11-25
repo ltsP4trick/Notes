@@ -65,6 +65,12 @@ sudo dnf install clamav clamav-update
 
 sudo clamscan -r / | grep FOUND >> /home/pnogas/report
 
+### Laptop:
+```
+yum install tuned-utils
+
+powertop2tuned -n -e laptop
+```
 
 
 ### hostname:
