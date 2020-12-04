@@ -14,4 +14,6 @@ chrome://flags/#sharing-qr-code-generator
 
 chrome://flags/#smooth-scrolling
 
-brave://flags/#enable-force-dark selective inversion non-image elements
+brave://flags/#enable-force-dark 			selective inversion non-image elements
+
+chrome://flags/#enable-webrtc-pipewire-capturer		OS screenshare

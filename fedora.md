@@ -20,9 +20,7 @@ sudo dnf install xorg-x11-drv-nvidia-cuda -y ###After this please reboot your sy
 
 ## Flatpak and VS code
 ```
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && sudo flatpak install flathub -y com.discordapp.Discord org.signal.Signal org.gtk.Gtk3theme.Adwaita-dark
-
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo' && sudo dnf check-update -y && sudo dnf install code -y
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && sudo flatpak install flathub -y com.discordapp.Discord org.signal.Signal com.visualstudio.code com.microsoft.Teams org.gtk.Gtk3theme.Adwaita-dark
 ```
 ## Delta rpm and mirror plugins
 ` sudo nano /etc/dnf/dnf.conf `

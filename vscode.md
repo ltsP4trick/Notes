@@ -22,6 +22,8 @@ F2 rename var, class or def in whole doc
 
 [Debugging keybinds](https://code.visualstudio.com/docs/getstarted/keybindings#_debug)
 
+flatpak warning https://github.com/flathub/com.visualstudio.code/blob/master/flatpak-warning.txt
+
 Extensions:
 
 code --install-extension almenon.arepl && code --install-extension formulahendry.code-runner && code --install-extension streetsidesoftware.code-spell-checker && code --install-extension pkief.material-icon-theme && code --install-extension ms-python.python && code --install-extension visualstudioexptteam.vscodeintellicode
