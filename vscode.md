@@ -22,7 +22,6 @@ F2 rename var, class or def in whole doc
 
 [Debugging keybinds](https://code.visualstudio.com/docs/getstarted/keybindings#_debug)
 
-flatpak warning https://github.com/flathub/com.visualstudio.code/blob/master/flatpak-warning.txt
 
 Extensions:
 
