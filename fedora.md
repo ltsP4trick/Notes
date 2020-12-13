@@ -2,6 +2,15 @@
 ```
 sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions
 ```
+## rpm fusion:
+- [rpm fusion](https://rpmfusion.org/Configuration)
+- [multimedia](https://rpmfusion.org/Howto/Multimedia)
+- [nvidia](https://rpmfusion.org/Howto/NVIDIA)
+- [cuda](https://rpmfusion.org/Howto/CUDA)
+```
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+sudo dnf install -y vlc steam && sudo dnf groupupdate Multimedia core -y
+```
 
 ## Snap and VS code
 ```
