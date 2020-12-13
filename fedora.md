@@ -5,7 +5,7 @@ sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-twe
 
 ## Snap and VS code
 ```
-sudo snap install discord signal-desktop teams && sudo snap install code --classic
+sudo dnf install snapd && sudo ln -s /var/lib/snapd/snap /snap && sudo snap install discord signal-desktop teams && sudo snap install code --classic
 
 ```
 
