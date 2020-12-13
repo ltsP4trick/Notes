@@ -79,6 +79,7 @@ Grub
 sudo nano /etc/default/grub && sudo update-grub
 
 Remove sudo:
+
 ``` 
 sudo deluser pnogas sudo
 ```
