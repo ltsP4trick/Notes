@@ -1,13 +1,14 @@
 ## apps:
 ```
-sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt update && sudo apt upgrade -y && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks xclip dkms  pavucontrol gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
+sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt update && sudo apt upgrade -y && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks xclip dkms gnome-shell-extensions gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
 ```
+`
+apt remove yelp
+`
 
-## Flatpak and VS code
+## Snap and VS code
 ```
-sudo snap install discord signal-desktop teams
-
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg && sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ && sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' && sudo apt install apt-transport-https -y && sudo apt update && sudo apt install code -y
+sudo snap install discord signal-desktop teams && sudo snap install code --classic
 
 ```
 ## Brave
@@ -41,7 +42,7 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 
 ### Install
 ```
-sudo dnf install clamav clamav-update
+sudo apt install clamav clamav-daemon
 ```
 ### Run
 
@@ -51,35 +52,33 @@ sudo clamscan -r / | grep FOUND >> /home/pnogas/report
 
 ### Laptop:
 ```
-yum install tuned-utils
 
-powertop2tuned -n -e laptop
 ```
 
 
 ### hostname:
 ```sudo hostnamectl set-hostname``` *name*
 
-### if gnome:
+### gnome:
 
 ```
-sudo dnf install -y gnome-shell-extension-pomodoro && gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true   
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true && gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
 ```
 
 2. ext:
-- [bluetooth](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
-- [audio switcher](https://extensions.gnome.org/extension/1028/gnome-shell-audio-output-switcher/)
+- [user themes](https://extensions.gnome.org/extension/19/user-themes/)
 - [clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 - [caffeine](https://extensions.gnome.org/extension/517/caffeine/)
-- [top icon](https://extensions.gnome.org/extension/615/appindicator-support/)
+- [top icon](https://extensions.gnome.org/extension/615/appindicator-support/)  [optional on ubuntu]
 
 
 ## Last thing
 Grub
 ```
-sudo nano /etc/default/grub
+sudo nano /etc/default/grub && sudo update-grub
 
 Remove sudo:
 ``` 
-sudo nano /etc/group
+sudo deluser pnogas sudo
 ```
