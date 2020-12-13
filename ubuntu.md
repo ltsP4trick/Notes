@@ -1,6 +1,6 @@
 ## apps:
 ```
-sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt update && sudo apt upgrade -y && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks xclip dkms gnome-shell-extensions gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
+sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt update && sudo apt upgrade -y && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks xclip dkms gnome-shell-extensions git gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
 ```
 `
 apt remove yelp
@@ -19,7 +19,7 @@ sudo apt install apt-transport-https curl gnupg -y && curl -s https://brave-brow
 
 ### git
 ```
-git config --global user.name **name**
+git config --global user.name ''
 git config --global user.email 'nogaspat+git@gmail.com'
 git config --global core.editor nano
 ssh-keygen -t rsa -b 4096
