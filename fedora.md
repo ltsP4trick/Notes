@@ -1,36 +1,24 @@
 ## apps:
 ```
-sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers pavucontrol gimp nano zsh flatpak google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts google-noto-emoji-color-fonts libreoffice libreoffice-langpack-pl python3-virtualenv     python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions && git clone https://github.com/aircrack-ng/rtl8812au.git && systemctl reboot
+sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt update && sudo apt upgrade -y && sudo apt-get install -y gnome-tweaks xclip dkms  pavucontrol gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     python3-black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc
 ```
-### Wifi
-https://github.com/aircrack-ng/rtl8812au/tree/07c704c0a7131208a909c3fc36e7daa122b98b16
-
-
-## rpm fusion:
-- [rpm fusion](https://rpmfusion.org/Configuration)
-- [multimedia](https://rpmfusion.org/Howto/Multimedia)
-- [nvidia](https://rpmfusion.org/Howto/NVIDIA)
-- [cuda](https://rpmfusion.org/Howto/CUDA)
+## Steam
 ```
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf remove firefox && sudo dnf install -y vlc steam telegram-desktop && sudo dnf groupupdate Multimedia core -y
-sudo dnf install akmod-nvidia -y ###After this please reboot your system
-sudo dnf install xorg-x11-drv-nvidia-cuda -y ###After this please reboot your system
-```
+sudo dpkg --add-architecture i386 && sudo apt install steam
 
+```
 ## Flatpak and VS code
 ```
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && sudo flatpak install flathub -y com.discordapp.Discord org.signal.Signal com.microsoft.Teams org.gtk.Gtk3theme.Adwaita-dark
+sudo snap install discord signal-desktop teams
 
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo' && sudo dnf check-update -y && sudo dnf install code -y
-```
-## Delta rpm and mirror plugins
-` sudo nano /etc/dnf/dnf.conf `
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg && sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ && sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' && sudo apt install apt-transport-https -y && sudo apt update && sudo apt install code -y
 
 ```
-fastestmirror=true
-deltarpm=true
+## Brave
 ```
+sudo apt install apt-transport-https curl gnupg -y && curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add - && echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list && sudo apt update && sudo apt install brave-browser -y
+```
+
 
 ### git
 ```
@@ -76,16 +64,6 @@ powertop2tuned -n -e laptop
 ### hostname:
 ```sudo hostnamectl set-hostname``` *name*
 
-### [block websites](https://bytenbit.com/how-to-block-websites-on-windows-ubuntu-macintosh/)
-
-```sudo nano /etc/hosts```
-
-```
-127.0.0.1 www.facebook.com
-127.0.0.1 www.youtube.com
-```
-write it at the end of file
-
 ### if gnome:
 
 ```
@@ -100,24 +78,10 @@ sudo dnf install -y gnome-shell-extension-pomodoro && gsettings set org.gnome.de
 - [top icon](https://extensions.gnome.org/extension/615/appindicator-support/)
 
 
-### if plasma
-```
-sudo dnf install -y gnome-themes-extra
-```
-windows managment -> windows behavior -> Advanced -> windwos placment == center
-left click on panel -> configure -> behavior -> Cycle through windows when scrolling
-System Settings > Input Devices > Keyboard > Hardware > NumLock on KDE Startup
-
 ## Last thing
 Grub
 ```
 sudo nano /etc/default/grub
-
-```
-EFI:
-```
-sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
-```
 
 Remove sudo:
 ``` 
