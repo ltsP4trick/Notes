@@ -1,6 +1,6 @@
 ## apps:
 ```
-sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions
+sudo dnf remove fedora-chromium-config totem -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions
 ```
 ## rpm fusion:
 - [rpm fusion](https://rpmfusion.org/Configuration)
