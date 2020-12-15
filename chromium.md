@@ -11,3 +11,5 @@ chrome://flags/#sharing-qr-code-generator
 chrome://flags/#smooth-scrolling
 
 chrome://flags/#enable-webrtc-pipewire-capturer		OS screenshare
+
+brave-browser -enable-features=UseOzonePlatform -ozone-platform=wayland
