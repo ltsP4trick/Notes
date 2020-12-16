@@ -1,15 +1,22 @@
-## apps:
+## Delta rpm and mirror plugins
+` sudo nano /etc/dnf/dnf.conf `
+
 ```
-sudo dnf remove fedora-chromium-config totem -y && sudo dnf update --refresh -y && sudo dnf install -y snapd gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions
+fastestmirror=true
+deltarpm=true
 ```
-## rpm fusion:
-- [rpm fusion](https://rpmfusion.org/Configuration)
-- [multimedia](https://rpmfusion.org/Howto/Multimedia)
-- [nvidia](https://rpmfusion.org/Howto/NVIDIA)
-- [cuda](https://rpmfusion.org/Howto/CUDA)
+
+## apps & [rpm fusion](https://rpmfusion.org/Configuration):
 ```
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf update --refresh -y && sudo dnf install -y vlc steam && sudo dnf groupupdate Multimedia core -y
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf remove fedora-chromium-config totem -y && sudo dnf update --refresh -y && sudo dnf install -y snapd gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions       vlc steam && sudo dnf groupupdate Multimedia core -y
 ```
+
+## Brave
+```
+sudo dnf install dnf-plugins-core -y && sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/ && sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc && sudo dnf install brave-browser -y
+```
+
+### now, reboot computer
 
 ## Snap and VS code
 ```
@@ -17,10 +24,7 @@ sudo ln -s /var/lib/snapd/snap /snap && sudo snap install discord signal-desktop
 
 ```
 
-## Brave
-```
-sudo dnf install dnf-plugins-core -y && sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/ && sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc && sudo dnf install brave-browser -y
-```
+### in the meantime you can change shortcuts or configure stuff that is below
 
 ### git
 ```
@@ -56,12 +60,10 @@ sudo apt install clamav clamav-daemon
 
 sudo clamscan -r / | grep FOUND >> /home/pnogas/report
 
-### Laptop:
+### [Laptop](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/performance_tuning_guide/chap-red_hat_enterprise_linux-performance_tuning_guide-tuned#installation-and-usage):
 
 ```
-yum install tuned-utils
-
-powertop2tuned -n -e laptop
+yum install tuned-utils -y && powertop2tuned -n -e laptop && systemctl start tuned && systemctl enable tuned
 ```
 
 
