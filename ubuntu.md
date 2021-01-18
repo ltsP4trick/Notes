@@ -71,6 +71,7 @@ gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true && 
 - [clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 - [caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [top icon](https://extensions.gnome.org/extension/615/appindicator-support/)  [optional on ubuntu]
+- [fuzzy search](https://extensions.gnome.org/extension/3956/gnome-fuzzy-app-search/)
 
 
 ## Last thing
