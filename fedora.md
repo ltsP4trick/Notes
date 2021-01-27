@@ -22,7 +22,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && sudo sh -
 
 ## Flatpak apps
 ```
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub com.discordapp.Discord org.signal.Signal
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub com.discordapp.Discord org.signal.Signal org.gtk.Gtk3theme.Adwaita-dark
 
 ```
 
