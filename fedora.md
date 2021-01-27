@@ -26,6 +26,15 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 ```
 
+### Signal system Tray
+
+[source](https://github.com/flathub/org.signal.Signal/issues/116#issuecomment-589998170)
+```
+nano /var/lib/flatpak/app/org.signal.Signal/current/active/export/share/applications/org.signal.Signal.desktop
+```
+`--use-tray-icon`
+
+
 ### in the meantime you can change shortcuts or configure stuff that is below
 
 ### git
