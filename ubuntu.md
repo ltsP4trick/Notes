@@ -1,14 +1,11 @@
 ## apps:
 ```
-sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt-get update && sudo apt-get upgrade -y && apt-get dist-upgrade -y && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks ttf-mscorefonts-installer gnome-shell-extension-prefs gnome-weather laptop-mode-tools xclip dkms gnome-shell-extensions git gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
+sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt-get update && sudo apt-get upgrade -y && apt-get dist-upgrade -y && sudo apt remove yelp && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks ttf-mscorefonts-installer gnome-shell-extension-prefs gnome-weather laptop-mode-tools xclip dkms gnome-shell-extensions git gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
 ```
-`
-apt remove yelp
-`
 
 ## Snap and VS code
 ```
-sudo snap install discord signal-desktop teams && sudo snap install code --classic
+sudo snap install discord signal-desktop && sudo snap install code --classic
 
 ```
 
