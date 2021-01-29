@@ -1,6 +1,6 @@
 ## apps:
 ```
-sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt-get update && sudo apt-get upgrade -y && apt-get dist-upgrade -y && sudo apt remove yelp && sudo apt-get install -y linux-headers-$(uname -r) gnome-tweaks ttf-mscorefonts-installer gnome-shell-extension-prefs gnome-weather laptop-mode-tools xclip dkms gnome-shell-extensions git gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
+sudo add-apt-repository multiverse && sudo add-apt-repository restricted && sudo apt-get update && sudo apt-get upgrade -y && apt-get dist-upgrade -y && sudo apt remove yelp && sudo apt-get install -y gnome-shell-extension-caffeine linux-headers-$(uname -r) gnome-tweaks ttf-mscorefonts-installer gnome-shell-extension-prefs gnome-weather laptop-mode-tools xclip dkms gnome-shell-extensions git gimp nano zsh flatpak libreoffice libreoffice-l10n-pl python3-virtualenv     black python3-numpy python3-matplotlib python3-pandas python3-scipy      zsh-syntax-highlighting zsh-autosuggestions   ubuntu-restricted-extras vlc steam
 ```
 
 ## Snap and VS code
@@ -36,18 +36,6 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 
  ```spaceship"```
 
-## Clamav
-
-### Install
-```
-sudo apt install clamav clamav-daemon
-```
-### Run
-
-` freshclam ` - update database
-
-sudo clamscan -r / | grep FOUND >> /home/pnogas/report
-
 
 ### hostname:
 ```sudo hostnamectl set-hostname``` *name*
@@ -60,9 +48,7 @@ gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true && 
 ```
 
 2. ext:
-- [user themes](https://extensions.gnome.org/extension/19/user-themes/)
 - [clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
-- [caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [fuzzy search](https://extensions.gnome.org/extension/3956/gnome-fuzzy-app-search/)
 
 
@@ -73,3 +59,16 @@ Grub
 sudo nano /etc/default/grub && sudo update-grub
 
 ```
+
+## Clamav
+
+### Install
+```
+sudo apt install clamav clamav-daemon
+```
+### Run
+
+` freshclam ` - update database
+
+sudo clamscan -r / | grep FOUND >> /home/pnogas/report
+
