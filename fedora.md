@@ -90,12 +90,11 @@ gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 
 2. ext:
 
-- [clipboard indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/)
-- [caffeine](https://extensions.gnome.org/extension/517/caffeine/)
-- [top icon](https://extensions.gnome.org/extension/615/appindicator-support/)
 - [fuzzy search](https://extensions.gnome.org/extension/3956/gnome-fuzzy-app-search/)
 
-sudo dnf install -y gnome-shell-extension-emoji-selector gnome-shell-extension-appindicator gnome-shell-extension-caffeine gnome-shell-extension-dash-to-dock -y && dnf remove google-noto-emoji-color-fonts -y
+```
+sudo dnf install -y gnome-shell-extension-emoji-selector gnome-shell-extension-appindicator gnome-shell-extension-caffeine gnome-shell-extension-dash-to-dock gnome-shell-extension-gpaste -y && dnf remove google-noto-emoji-color-fonts -y
+```
 
 ## Last thing
 Grub:
