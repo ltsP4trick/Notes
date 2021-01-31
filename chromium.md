@@ -12,4 +12,4 @@ chrome://flags/#smooth-scrolling
 
 chrome://flags/#enable-webrtc-pipewire-capturer		OS screenshare
 
-brave-browser -enable-features=UseOzonePlatform -ozone-platform=wayland
+brave-browser ```-enable-features=UseOzonePlatform -ozone-platform=wayland```
