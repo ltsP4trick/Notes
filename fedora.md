@@ -8,7 +8,7 @@ deltarpm=true
 
 ## apps & [rpm fusion](https://rpmfusion.org/Configuration):
 ```
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf remove fedora-chromium-config totem libreoffice-core -y && sudo dnf update --refresh -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions       vlc && sudo dnf groupupdate Multimedia core -y
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf remove fedora-chromium-config totem -y && sudo dnf update --refresh -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions       vlc && sudo dnf groupupdate Multimedia core -y
 ```
 
 ## Brave && Fedora
@@ -93,7 +93,7 @@ gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
 - [fuzzy search](https://extensions.gnome.org/extension/3956/gnome-fuzzy-app-search/)
 
 ```
-sudo dnf install -y gnome-shell-extension-emoji-selector gnome-shell-extension-appindicator gnome-shell-extension-caffeine gnome-shell-extension-dash-to-dock gnome-shell-extension-gpaste -y && dnf remove google-noto-emoji-color-fonts -y
+sudo dnf install -y gnome-shell-extension-emoji-selector gnome-shell-extension-appindicator gnome-shell-extension-caffeine gnome-shell-extension-dash-to-dock gnome-shell-extension-gpaste -y && dnf remove twitter-twemoji-fonts -y
 ```
 
 ## Last thing
