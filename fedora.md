@@ -40,7 +40,7 @@ nano /var/lib/flatpak/app/org.signal.Signal/current/active/export/share/applicat
 ### git
 ```
 git config --global user.name ''
-git config --global user.email 'nogaspat+git@gmail.com'
+git config --global user.email '52964049+itsP4trickn@users.noreply.github.com'
 git config --global core.editor nano
 ssh-keygen -t rsa -b 4096
 xclip -sel clip < ~/.ssh/id_rsa.pub
