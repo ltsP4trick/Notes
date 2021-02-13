@@ -8,7 +8,7 @@ deltarpm=true
 
 ## apps & [rpm fusion](https://rpmfusion.org/Configuration):
 ```
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf remove fedora-chromium-config totem -y && sudo dnf update --refresh -y && sudo dnf install -y gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions       vlc && sudo dnf groupupdate Multimedia core -y
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf remove fedora-chromium-config totem -y && sudo dnf update --refresh -y && sudo dnf install -y python3-jupyter-client gnome-tweaks xclip dkms kernel-devel kernel-headers gimp nano zsh flatpak libreoffice libreoffice-langpack-pl python3-virtualenv     google-noto-sans-fonts google-noto-serif-fonts google-noto-sans-mono-fonts    python3-black python-numpy python-matplotlib python-pandas python-scipy      zsh-syntax-highlighting zsh-autosuggestions       vlc && sudo dnf groupupdate Multimedia core -y
 ```
 
 ## Brave && Fedora

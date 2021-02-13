@@ -25,4 +25,4 @@ F2 rename var, class or def in whole doc
 
 Extensions:
 
-code --install-extension formulahendry.code-runner && code --install-extension pkief.material-icon-theme && code --install-extension ms-python.python && code --install-extension visualstudioexptteam.vscodeintellicode
+code --install-extension pkief.material-icon-theme && code --install-extension ms-python.python && code --install-extension visualstudioexptteam.vscodeintellicode
