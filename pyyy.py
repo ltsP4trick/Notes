@@ -44,3 +44,7 @@ except NameError:
     print("")
 finally:
     "yay"
+
+
+#Lambda
+#https://github.com/itsP4trickn/School/blob/master/BMI.py
