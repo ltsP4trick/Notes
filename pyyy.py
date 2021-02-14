@@ -1,16 +1,15 @@
-# [venv](https://docs.python.org/3/tutorial/venv.html)
-virtualenv <insert-name> #or python -m venv <insert-name>
-source <insert-name>/bin/activate
+"""
+# run virtual env:
+    python -m venv <insert-name>            # virtualenv <insert-name>
+    source <inserted-name>/bin/activate
 
-# end:
-deactivate
-
-# deleting folder will remove virtual environment (you need sudo)
-
+#to exit:
+    deactivate
+"""
 # Strings:
-
+first = "Patryk"
+last = "Nog"
 print("this is \n in next line")
-
 print(f'hello, {first} {last}')
 print('hello, {} {}'.format(first,last))                                   # hello, patrick nowak
 print('hello, {0} {1}'.format(first,last))                                 # hello, patrick nowak
@@ -24,16 +23,8 @@ from datetime import datetime
 
 print(datetime.today().weekday())
 
-print("what number squared gives 25?")
-x = input("answer is: ")
-if(int(x) == 5 or int(x) == -5):
-    print("good job")
-else:
-    print("not really") 
 
-
-print("what number squared gives 25?")
-y = input("answer is: ")
+y=int(input("what is 25 squared?: " + "\n"))
 if int(y) in(5, -5):   
     print("good job")
 else:
@@ -43,3 +34,13 @@ a = [0,1,2,3,4,5,6,7,8,9]
 a[-1] #last char
 a[:-1] #from the beginning up to last one
 a[::-1] #reversed order
+
+liczba = 0
+try:
+    print(5/liczba)
+except ZeroDivisionError:
+    print("nie dziel przez zero")
+except NameError:
+    print("")
+finally:
+    "yay"
