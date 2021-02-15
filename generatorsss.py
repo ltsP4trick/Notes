@@ -7,4 +7,3 @@ def gener(x):
 
 for a in gener(10):
     print(a)
-
